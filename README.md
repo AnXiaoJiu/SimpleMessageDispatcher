@@ -6,5 +6,5 @@ SimpleMessageDispatcher里边维护着两个消息队列(一个是针对于Conso
 
 消息的分发有延时执行和非延时执行
 
-MianTest里边是测试的代码
+TestMain里边是测试的代码
 
