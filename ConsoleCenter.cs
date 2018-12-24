@@ -3,25 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Main : MonoBehaviour
+/// <summary>
+/// 控制中心
+/// </summary>
+public class ConsoleCenter : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
         SimpleMessageDispatcher.Instance.msgRecived = ConsoleMsgRecived;
-
-        int num = 1;
-        while(num<10)
-        {
-            SimpleMessageDispatcher.Instance.SendMessage(num, (int)ConsoleMsgType.Common, num);
-            num++;
-        }
     }
 
-  
-    private void Update()
-    {
-        SimpleMessageDispatcher.Instance.ConsoleMsgUpdate();
-    }
+
+
 
     public void ConsoleMsgRecived(int MsgID, params object[] ExtraInfo)
     {
