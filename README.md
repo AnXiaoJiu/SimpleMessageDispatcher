@@ -1,8 +1,8 @@
 # SimpleMessageDispatcher
 简单的消息分发器
 
-SimpleMessageDispatcher里边维护着一个消息队列
+SimpleMessageDispatcher里边维护着两个消息队列(一个是针对于控制中心消息，一个是针对于对象的消息)
 延时时间到了就会自动执行
 
-Mian里边是测试的代码
+MianTest里边是测试的代码
 
