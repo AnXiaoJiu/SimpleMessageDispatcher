@@ -7,18 +7,24 @@ public class SimpleMessageDispatcher
 {
     private static readonly SimpleMessageDispatcher instance = new SimpleMessageDispatcher();
 
+	/// <summary>
+    /// 控制台消息委托
+    /// </summary>
     public ConsoleMsgRecived msgRecived;
 
     /// <summary>
-    /// 消息池
+    /// 控制台消息池
     /// </summary>
     private List<ConsoleMsg> consoleMsgPool;
 
     /// <summary>
-    /// 对象集合
+    /// 游戏对象集合
     /// </summary>
     private Dictionary<long, BaseGameEntity> m_dictEntities;
-
+	
+	/// <summary>
+    /// 游戏对象消息池
+    /// </summary>
     private List<GameEntityMsg> gameEntityMsgPool;
 
     public static SimpleMessageDispatcher Instance
@@ -110,7 +116,7 @@ public class SimpleMessageDispatcher
     {
         BaseGameEntity receiver = getRegisteredEntityByID(receiverID);
 
-        GameEntityMsg msg = getGameEntityMsg();
+        GameEntityMsg msg = getGameEntityMsg();  //GameEntityMsg msg = new GameEntityMsg();
         if (delay <= 0.0f)
         {
             receiver.HandleMessage(msg);
