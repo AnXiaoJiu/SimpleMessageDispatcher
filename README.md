@@ -1,2 +1,8 @@
 # SimpleMessageDispatcher
 简单的消息分发器
+
+SimpleMessageDispatcher里边维护着一个消息队列
+延时时间到了就会自动执行
+
+Mian里边是测试的代码
+
